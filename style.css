@@ -426,7 +426,7 @@ nav {
 }
 
 .get-a-quote {
-    padding: 70px 0 59px 0;
+    padding: 70px 0 6px 0;
     background-color: #f06c64;
 }
 
@@ -495,6 +495,20 @@ nav {
     padding-top: 12px;
     height: 190px;
     resize: none;
+}
+
+.form__submit {
+    background-color: #f0d8d9;
+    width: 99%;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.form__submit:hover {
+    cursor: pointer;
+    background-color: #d6564f;
+    color: #f0d8d9;
+    transition: 0.5s;
 }
 
 .contact-info__title {
