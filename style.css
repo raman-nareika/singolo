@@ -72,6 +72,7 @@ nav {
     position: relative;
 }
 
+.menu__link_active,
 .menu__link:hover {
     color: #f06c64;
 }
