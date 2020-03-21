@@ -14,11 +14,11 @@
                 <h1 class="header__title">Singolo</h1>
                 <nav>
                     <ul class="menu">
-                        <li class="menu-item"><a href="#" class="menu__link">Home</a></li>
-                        <li class="menu-item"><a href="#our-services" class="menu__link">Services</a></li>
-                        <li class="menu-item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
-                        <li class="menu-item"><a href="#about-us" class="menu__link">About</a></li>
-                        <li class="menu-item"><a href="#get-a-quote" class="menu__link">Contact</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link menu__link_home ">Home</a></li>
+                        <li class="menu__item"><a href="#our-services" class="menu__link">Services</a></li>
+                        <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
+                        <li class="menu__item"><a href="#about-us" class="menu__link">About</a></li>
+                        <li class="menu__item"><a href="#get-a-quote" class="menu__link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -112,7 +112,7 @@
                     <h2 class="portfolio__title">Portfolio</h2>
                     <p class="portfolio__sub-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                     <div class="btn-group">
-                        <button type="button" class="category-btn">All</button>
+                        <button type="button" class="category-btn category-btn_active">All</button>
                         <button type="button" class="category-btn">Web Design</button>
                         <button type="button" class="category-btn">Graphic Design</button>
                         <button type="button" class="category-btn">Artwork</button>
@@ -211,7 +211,7 @@
                             <div>
                                 <input type="text" class="form__input" placeholder="Name (Required)" required>
                                 <input type="email" class="form__input" placeholder="Email (Required)" required>
-                                <input type="text" class="form__input" placeholder="Subject">
+                                <input type="text" class="form__input form__subject" placeholder="Subject">
                                 <textarea  class="form__textarea" placeholder="Describe your project in detail..."></textarea>
                                 <input type="submit" class="form__input form__submit" value="Submit">
                             </div>
@@ -240,6 +240,33 @@
                     </div>
                 </div>
             </section>
+
+            <!-- The Modal -->
+            <div id="mailSentDodal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal__title">Письмо отправлено</h5>
+                        <span class="modal__close">&times;</span>    
+                    </div>
+                    <div class="modal__body">
+                        <div class="modal__row">
+                            <label for="modal__subject" class="modal__row_label">Тема:</label>
+                            <div class="modal__row_div">
+                                <input class="modal__subject modal__text-input" id="modal__subject"/>
+                            </div>
+                        </div>
+                        <div class="modal__row">
+                            <label for="modal__desc" class="modal__row_label">Описание:</label>
+                            <div class="modal__row_div">
+                                <input class="modal__desc modal__text-input" id="modal__desc"/>
+                            </div>
+                        </div>
+                        <div class="modal__row">
+                            <button class="modal__body_btn">OK</button>
+                        </div>
+                    </div>
+                </div>          
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__content">
