@@ -8,7 +8,7 @@
         const stickyHeaderClass = "header_sticky";
         const activeMenuClass = "menu__link_active";
         const sliderId = "#slider";
-        const menuItems = [...document.getElementsByClassName("menu__link")].map(a => a.getAttribute("href")).filter(link => link.length > 1);//.concat(sliderId);
+        const menuItems = [sliderId].concat([...document.getElementsByClassName("menu__link")].map(a => a.getAttribute("href")).filter(link => link.length > 1));
 
         window.onscroll = function(e) {
             if (window.pageYOffset > headerOffsetTop) {
@@ -16,19 +16,18 @@
             } else {
                 header.classList.remove(stickyHeaderClass);
             }
-
-            menuItems.forEach(function(link) {
-                let menuLink = link === sliderId ? document.querySelector(".menu__link_home") : document.querySelector(`[href='${link}']`);
+            let lower = menuItems.filter(function(link) {
                 let section = document.querySelector(link);
-                let sectionOffsetTop = section.offsetTop;
-                
-                if(window.pageYOffset + header.offsetHeight >= sectionOffsetTop) {
-                    if(!menuLink.classList.contains(activeMenuClass)) {
-                        resetMenu();
-                        menuLink.classList.add(activeMenuClass);
-                    }
-                }
+
+                return window.pageYOffset + header.offsetHeight >= section.offsetTop;
             });
+            let activeLink = lower[lower.length - 1];
+            let menuLink = document.querySelector(`[href='${activeLink}']`) ?? document.querySelector(".menu__link_home");
+            if(!menuLink.classList.contains(activeMenuClass)) {
+                resetMenu();
+                menuLink.classList.add(activeMenuClass);
+            }
+            
         };
 
         [...document.getElementsByClassName("menu__link")].forEach(link => {
