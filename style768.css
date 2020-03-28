@@ -1,0 +1,9 @@
+@media only screen and (max-width: 767px) {
+    .our-services__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio__projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

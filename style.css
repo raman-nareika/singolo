@@ -29,11 +29,15 @@ nav {
 }
 
 .header__content,
-.our-services__content,
 .portfolio__content,
 .about-us__content,
 .get-a-quote__content {
     width: 1020px;
+    margin: auto;
+}
+
+.our-services__content {
+    width: 940px;
     margin: auto;
 }
 
@@ -104,7 +108,7 @@ nav {
 
 .slider__content {
     position: relative;
-    padding: 53px 0 58px 0;
+    padding: 53px 0 54px 0;
     width: 800px;
     margin: auto;
     overflow: hidden;
@@ -181,12 +185,6 @@ nav {
     flex-direction: column;
 }
 
-.our-services__title,
-.our-services__description,
-.our-services__list {
-    padding-left: 43px;
-}
-
 .our-services__title {
     font-size: 30px;
     line-height: 34px;
@@ -210,24 +208,15 @@ nav {
 }
 
 .our-services__list {
-    display: flex;
-}
-
-.our-services__column {
-    width: 300px;
-}
-
-.our-services__column + .our-services__column {
-    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-row-gap: 25px;
 }
 
 .our-services__cell {
     display: flex;
     justify-content: space-between;
-}
-
-.our-services__cell + .our-services__cell {
-    margin-top: 25px;
 }
 
 .our-services__cell_img {
@@ -341,6 +330,10 @@ nav {
 .people {
     display: grid;
     grid-gap: 20px;
+}
+
+.portfolio__projects {
+    grid-row-gap: 20px;
 }
 
 .people {
@@ -508,7 +501,7 @@ nav {
     color: #ee8284;
     height: 38px;
     outline: none;
-    width: 100%;
+    width: calc(100% - 15px);
 }
 
 .form__input::placeholder,
