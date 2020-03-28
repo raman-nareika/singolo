@@ -1,5 +1,3 @@
-
-
 !!function() {
     document.addEventListener("DOMContentLoaded", () => {
         //Header
@@ -8,14 +6,15 @@
         const stickyHeaderClass = "header_sticky";
         const activeMenuClass = "menu__link_active";
         const sliderId = "#slider";
-        const menuItems = [sliderId].concat([...document.getElementsByClassName("menu__link")].map(a => a.getAttribute("href")).filter(link => link.length > 1));
+        const menuLinks = [...document.getElementsByClassName("menu__link")];
+        const menuItems = [sliderId].concat(menuLinks.map(a => a.getAttribute("href")).filter(link => link.length > 1));
 
         window.onscroll = function(e) {
-            if (window.pageYOffset > headerOffsetTop) {
+            /*if (window.pageYOffset > headerOffsetTop) {
                 header.classList.add(stickyHeaderClass);
             } else {
                 header.classList.remove(stickyHeaderClass);
-            }
+            }*/
             let lower = menuItems.filter(function(link) {
                 let section = document.querySelector(link);
 
@@ -30,8 +29,14 @@
             
         };
 
-        [...document.getElementsByClassName("menu__link")].forEach(link => {
-            link.addEventListener("click", function() {
+        menuLinks.forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const sectionId = e.target.getAttribute("href").substr(1)
+                document.getElementById(sectionId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
                 resetMenu();
                 this.classList.add(activeMenuClass);
             });
@@ -57,8 +62,8 @@
         });
 
         [...document.getElementsByClassName("project__image")].forEach(image => {
-            image.addEventListener("click", function() {
-                if(this.classList.contains("project__image_active")){
+            image.onclick = function() {
+                if(this.classList.contains("project__image_active")) {
                     this.classList.remove("project__image_active");
                 } else {
                     const active = document.querySelector(".project__image_active");
@@ -69,12 +74,10 @@
 
                     this.classList.add("project__image_active");
                 }
-            });
+            };
         });
 
-        const shuffleAndReplace = function(originalProjects, shuffledProjects) {
-            
-            
+        const shuffleAndReplace = function(originalProjects, shuffledProjects) {          
             for(let i = 0; i < originalProjects.length; i++) {
                 let old = originalProjects[i];
                 let _new = shuffledProjects[i];

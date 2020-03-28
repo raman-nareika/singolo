@@ -4,6 +4,8 @@
     <head>
         <title>Singolo</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style768.css">
+        <link rel="stylesheet" href="style375.css">
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
         <script src="script.js"></script>
@@ -26,8 +28,13 @@
         <main>
             <section class="slider" id="slider">
                 <div class="slider__content">
-                    <img src="./assets/slider/iphone-vertical.png" class="slider__img" />
-                    <img src="./assets/slider/iphone-horizontal.png" class="slider__img" />
+                    <div class="slider__slide">
+                        <img src="./assets/slider/slide1-iphone-vertical.png" class="slider__img" />
+                        <img src="./assets/slider/slide1-iphone-horizontal.png" class="slider__img" />
+                    </div>
+                    <div class="slider__slide slider__slide_active">
+                        <img src="./assets/slider/slide2.png" class="slider__img" />
+                    </div>
                 </div>
                 <a href="#" class="slider__prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -117,7 +124,7 @@
                         <button type="button" class="category-btn">Graphic Design</button>
                         <button type="button" class="category-btn">Artwork</button>
                     </div>
-                    <div class="projects-row">
+                    <div class="portfolio__projects">
                         <div class="project">
                             <img src="./assets/portfolio/image1.png" class="project__image" />
                         </div>
@@ -128,8 +135,6 @@
                         </div><div class="project">
                             <img src="./assets/portfolio/image4.png" class="project__image" />
                         </div>
-                    </div>
-                    <div class="projects-row">
                         <div class="project">
                             <img src="./assets/portfolio/image5.png" class="project__image" />
                         </div>
@@ -140,8 +145,6 @@
                         </div><div class="project">
                             <img src="./assets/portfolio/image8.png" class="project__image" />
                         </div>
-                    </div>
-                    <div class="projects-row">
                         <div class="project">
                             <img src="./assets/portfolio/image9.png" class="project__image" />
                         </div>
@@ -167,7 +170,7 @@
                             <img src="./assets/about-us/adam.png" />
                             <h4 class="full-name">Adam Jensen</h4>
                             <p class="bio">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-                            <div class="icons">
+                            <div class="people__card-icons">
                                 <a href="#" class="facebook-icon"></a>
                                 <a href="#" class="google-icon"></a>
                                 <a href="#" class="twitter-icon"></a>
@@ -178,7 +181,7 @@
                             <img src="./assets/about-us/desmond.png" />
                             <h4 class="full-name">Desmond Miles</h4>
                             <p class="bio">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-                            <div class="icons">
+                            <div class="people__card-icons">
                                 <a href="#" class="facebook-icon"></a>
                                 <a href="#" class="google-icon"></a>
                                 <a href="#" class="twitter-icon"></a>
@@ -189,7 +192,7 @@
                             <img src="./assets/about-us/scolara.png" />
                             <h4 class="full-name">Scolara Visari</h4>
                             <p class="bio">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-                            <div class="icons">
+                            <div class="people__card-icons">
                                 <a href="#" class="facebook-icon"></a>
                                 <a href="#" class="google-icon"></a>
                                 <a href="#" class="twitter-icon"></a>

@@ -25,7 +25,7 @@ nav {
 }
 
 .header__content {
-    padding: 18px 0 9px 0;
+    padding: 18px 0 19px 0;
 }
 
 .header__content,
@@ -53,6 +53,7 @@ nav {
     color: #ffffff;
     font-family: "Lato", sans-serif;
     font-size: 25px;
+    line-height: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -0.7px;
@@ -102,13 +103,19 @@ nav {
 }
 
 .slider__content {
-    padding: 53px 0 58px 0;
     position: relative;
+    padding: 53px 0 58px 0;
     width: 800px;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+}
+
+.slider__slide {
+    display: none;
+}
+
+.slider__slide_active {
+    display: block;
 }
 
 .slider__img + .slider__img {
@@ -255,7 +262,7 @@ nav {
 .portfolio {
     background-color: #2d303a;
     padding-top: 60px;
-    padding-bottom: 77px;
+    padding-bottom: 63px;
 }
 
 .portfolio__title {
@@ -275,7 +282,7 @@ nav {
     margin: auto;
 }
 
-.project__image:nth-of-type(n+13) {
+.project:nth-of-type(n+13) {
     display: none;
 }
 
@@ -293,12 +300,13 @@ nav {
     background-color: #2d303a;
     border-color: #767e9e;
     font-size: 12px;
+    line-height: 22px;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     text-align: left;
     border: 1px solid;
     border-radius: 3px;
-    padding: 3px 6px 3px 6px;
+    padding: 0 6px 0 6px;
     text-align: justify;
     letter-spacing: -0.2px;
 }
@@ -326,16 +334,21 @@ nav {
 }
 
 .portfolio .btn-group {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
-.projects-row, .people {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
+.portfolio__projects,
+.people {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.people {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio__projects {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .projects-row + .projects-row {
@@ -354,18 +367,17 @@ nav {
 
 .about-us__title {
     font-size: 30px;
-    line-height: 30px;
     color: #666d89;
     font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: left;
-    letter-spacing: -0.2px;
+    letter-spacing: 1.1px;
 }
 
 .about-us .sub-text {
     margin-top: 20px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 29.7px;
     color: #767e9e;
     font-family: "Lato", sans-serif;
     font-weight: 300;
@@ -375,7 +387,7 @@ nav {
 }
 
 .about-us .people {
-    margin-top: 50px;
+    margin-top: 47px;
 }
 
 .people__card {
@@ -408,8 +420,8 @@ nav {
     text-overflow: ellipsis;
 }
 
-.people .icons {
-    margin-top: 22px;
+.people__card-icons {
+    margin-top: 24px;
 }
 
 .facebook-icon, .google-icon, .twitter-icon, .linkedin-icon {
@@ -422,7 +434,7 @@ nav {
 }
 
 .facebook-icon, .google-icon, .twitter-icon {
-    margin-right: 8px;
+    margin-right: 4px;
 }
 
 .facebook-icon {
@@ -454,7 +466,7 @@ nav {
     font-size: 30px;
     line-height: 18px;
     word-spacing: -1px;
-    letter-spacing: -0.16px;
+    letter-spacing: 0.5px;
     color: #f0d8d9;
     font-family: "Lato", sans-serif;
     font-weight: 900;
@@ -471,21 +483,17 @@ nav {
     text-align: left;
     margin-bottom: 45px;
     letter-spacing: 0.19px;
-    word-spacing: -2.6px;
+    word-spacing: -2px;
 }
 
 .get-a-quote-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form {
-    width: 620px;
-    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
 }
 
 .contact-info {
-    width: 300px;
+    padding-left: 10px;
 }
 
 .form__input, .form__textarea {
@@ -500,7 +508,7 @@ nav {
     color: #ee8284;
     height: 38px;
     outline: none;
-    width: 97%;
+    width: 100%;
 }
 
 .form__input::placeholder,
@@ -519,7 +527,7 @@ nav {
 
 .form__submit {
     background-color: #f0d8d9;
-    width: 99%;
+    width: 100%;
     font-size: 16px;
     margin-top: 5px;
 }
