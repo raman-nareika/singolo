@@ -130,24 +130,27 @@
 
                 disableAndActivate(this, "category-btn_active");
                 shuffleAndReplace(projects, shuffledProjects);
+                clickPhoto();
             });
         });
 
-        [...document.getElementsByClassName("project__image")].forEach(image => {
-            image.onclick = function() {
-                if(this.classList.contains("project__image_active")) {
-                    this.classList.remove("project__image_active");
-                } else {
-                    const active = document.querySelector(".project__image_active");
-                    
-                    if(active) {
-                        active.classList.remove("project__image_active");
-                    }
+        const clickPhoto = function() {
+            [...document.getElementsByClassName("project__image")].forEach(image => {
+                image.onclick = function() {
+                    if(this.classList.contains("project__image_active")) {
+                        this.classList.remove("project__image_active");
+                    } else {
+                        const active = document.querySelector(".project__image_active");
+                        
+                        if(active) {
+                            active.classList.remove("project__image_active");
+                        }
 
-                    this.classList.add("project__image_active");
-                }
-            };
-        });
+                        this.classList.add("project__image_active");
+                    }
+                };
+            })
+        };
 
         const shuffleAndReplace = function(originalProjects, shuffledProjects) {          
             for(let i = 0; i < originalProjects.length; i++) {
@@ -207,5 +210,6 @@
         [close, modalBtn].forEach(x => x.onclick = function() {
             modal.style.display = "none";
         });
+        clickPhoto();
     });
 }();
