@@ -1,9 +1,17 @@
-@media (max-width: 767px) {
+@media (max-width: 1019px) {
+    .header__content {
+        padding: 0 40px;
+    }
+    
     .our-services__list {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .portfolio__projects {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .people__card > img {
+        width: 100%;
     }
 }

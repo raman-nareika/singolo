@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Singolo</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style768.css">
@@ -13,6 +14,7 @@
     <body>
         <header id="header">
             <div class="header__content">
+                <button class="header__burger" type="button"></button>
                 <h1 class="header__title">Singolo</h1>
                 <nav>
                     <ul class="menu">
@@ -26,19 +28,19 @@
             </div>
         </header>
         <main>
-            <section class="slider" id="slider">
+            <section class="slider slider-red" id="slider">
                 <div class="slider__content">
                     <div class="slider__slide slider__slide_active">
                         <div class="slider__phone slider__phone-vertical">
                             <div class="slider__phone_home slider__phone_home-vertical"></div>
-                            <img src="assets/slider/phone-vertical-display.png" class="slider__phone-display slider__phone-vertical-display active"/>
+                            <img src="assets/slider/phone-vertical-display.png" class="slider__phone-display slider__phone-vertical-display slider__phone_active"/>
                         </div>
                         <div class="slider__phone slider__phone-horizontal">
-                            <img src="assets/slider/phone-horizontal-display.png" class="slider__phone-display slider__phone-horizontal-display active"/>
+                            <img src="assets/slider/phone-horizontal-display.png" class="slider__phone-display slider__phone-horizontal-display slider__phone_active"/>
                             <div class="slider__phone_home slider__phone_home-horizontal"></div>
                         </div>
                     </div>
-                    <div class="slider__slide">
+                    <div class="slider__slide slider__slide2">
                         <img src="./assets/slider/slide2.png" class="slider__img" />
                     </div>
                 </div>
