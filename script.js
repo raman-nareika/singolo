@@ -49,6 +49,14 @@
             });
         };
 
+        //slider
+
+        [...document.getElementsByClassName("slider__phone_home")].forEach(btn => {
+            btn.onclick = function(e) {
+                e.target.parentNode.querySelector(".slider__phone-display").classList.toggle("active");
+            }
+        });
+
         //Portfolio
         
         [...document.getElementsByClassName("category-btn")].forEach(btn => {

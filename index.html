@@ -29,19 +29,25 @@
             <section class="slider" id="slider">
                 <div class="slider__content">
                     <div class="slider__slide slider__slide_active">
-                        <img src="./assets/slider/slide1-iphone-vertical.png" class="slider__img" />
-                        <img src="./assets/slider/slide1-iphone-horizontal.png" class="slider__img" />
+                        <div class="slider__phone slider__phone-vertical">
+                            <div class="slider__phone_home slider__phone_home-vertical"></div>
+                            <img src="assets/slider/phone-vertical-display.png" class="slider__phone-display slider__phone-vertical-display active"/>
+                        </div>
+                        <div class="slider__phone slider__phone-horizontal">
+                            <img src="assets/slider/phone-horizontal-display.png" class="slider__phone-display slider__phone-horizontal-display active"/>
+                            <div class="slider__phone_home slider__phone_home-horizontal"></div>
+                        </div>
                     </div>
                     <div class="slider__slide">
                         <img src="./assets/slider/slide2.png" class="slider__img" />
                     </div>
                 </div>
-                <a href="#" class="slider__prev">
+                <div class="slider__prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a href="#" class="slider__next">
+                </div>
+                <div class="slider__next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
+                </div>
             </section>
             <section class="our-services" id="our-services">
                 <div class="our-services__content">

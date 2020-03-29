@@ -98,16 +98,72 @@ header {
     overflow: hidden;
 }
 
+.slider__phone {
+    position: relative;
+}
+
+.slider__phone-vertical {
+    height: 483px;
+    width: 240px;
+    background-image: url(assets/slider/phone-vertical.png);
+}
+
+.slider__phone-horizontal {
+    height: 240px;
+    width: 483px;
+    background-image: url(assets/slider/phone-horizontal.png);
+}
+
+.slider__phone_home-vertical,
+.slider__phone_home-horizontal {
+    height: 43px;
+    width: 42px;
+    background-image: url(assets/slider/home-btn.png);
+    cursor: pointer;
+    position: absolute;
+}
+
+.slider__phone_home-vertical {
+    bottom: 32px;
+    left: calc(50% - 31px);
+
+}
+
+.slider__slide_active .active {
+    display: block;
+}
+
+.slider__phone-vertical-display,
+.slider__phone-horizontal-display  {
+    display: none;
+}
+
+.slider__phone_home-horizontal {
+    transform: rotate(90deg);
+    bottom: calc(50% - 10px);
+    left: 6px;
+}
+
+.slider__phone-vertical-display {
+    position: absolute;
+    left: 14px;
+    bottom: 85px;
+}
+
+.slider__phone-horizontal-display {
+    position: absolute;
+    left: 60px;
+    bottom: 38px;
+}
+
 .slider__slide {
     display: none;
 }
 
 .slider__slide_active {
-    display: block;
-}
-
-.slider__img + .slider__img {
-    margin-left: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .slider__prev,
