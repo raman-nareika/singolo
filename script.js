@@ -10,11 +10,11 @@
         const menuItems = [sliderId].concat(menuLinks.map(a => a.getAttribute("href")).filter(link => link.length > 1));
 
         window.onscroll = function(e) {
-            /*if (window.pageYOffset > headerOffsetTop) {
+            if (window.pageYOffset > headerOffsetTop) {
                 header.classList.add(stickyHeaderClass);
             } else {
                 header.classList.remove(stickyHeaderClass);
-            }*/
+            }
             let lower = menuItems.filter(function(link) {
                 let section = document.querySelector(link);
 

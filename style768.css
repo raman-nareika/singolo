@@ -2,9 +2,18 @@
     .header__content {
         padding: 0 40px;
     }
-    
+
+    .slider__content {
+        padding: 0 30px;
+    }
+
     .our-services__list {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio__content,
+    .about-us__content {
+        padding: 0 40px;
     }
 
     .portfolio__projects {
@@ -13,5 +22,9 @@
 
     .people__card > img {
         width: 100%;
+    }
+
+    .get-a-quote__content {
+        padding: 0 37px 0 42px;
     }
 }
