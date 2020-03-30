@@ -4,7 +4,16 @@
     }
 
     .slider__content {
+        box-sizing: border-box;
         padding: 0 30px;
+    }
+
+    .slider__prev {
+        left: 0px;
+    }
+
+    .slider__next {
+        right: 0px;
     }
 
     .our-services__list {
